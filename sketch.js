@@ -79,7 +79,7 @@ function drawSkeleton() { //偵測出各點，並畫線
     partB = pose.keypoints[8]; //right elbow
     if (partA.score > 0.1 ) {
       for (let a=0;a<partA.x;a=a+1) {
-        image(earImg,partA.x+a, partA.y-25, 50, 50);
+        image(earImg,partA.x-40-a, partA.y-25, 50, 50);
       }
     }
     partA = pose.keypoints[0]; 

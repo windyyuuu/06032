@@ -61,7 +61,7 @@ function draw() {
 
 
 function drawSkeleton() { //偵測出各點，並畫線
-   //background(255);
+   background(255);
   // Draw all the tracked landmark points
   for (let i = 0; i < poses.length; i++) {
      pose = poses[i];
@@ -72,14 +72,14 @@ function drawSkeleton() { //偵測出各點，並畫線
     // let posex = width-((frameCount*speed)%width);
     if (partA.score > 0.1 ) {
       for (let a=0;a<partA.x;a=a+1) {
-        image(earImg,partA.x+a, partB.y-25, 50, 50);
+        image(earImg,partA.x, partB.y-25, 50, 50);
       }
     }
     partA = pose.keypoints[7]; //left elbow
     partB = pose.keypoints[8]; //right elbow
     if (partA.score > 0.1 ) {
       for (let a=0;a<partA.x;a=a+1) {
-        image(earImg,partA.x-40-a, partA.y-25, 50, 50);
+        image(earImg,partA.x, partA.y-25, 50, 50);
       }
     }
     partA = pose.keypoints[0]; 

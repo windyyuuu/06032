@@ -61,7 +61,7 @@ function draw() {
 
 
 function drawSkeleton() { //偵測出各點，並畫線
-  
+  background(255);
   // Draw all the tracked landmark points
   for (let i = 0; i < poses.length; i++) {
      pose = poses[i];
